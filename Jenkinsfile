@@ -47,13 +47,7 @@ node {
 	  sh "docker rm -f \$(docker ps -a -f name=devopsexample -q) || true"   
 	       
     }
-	
-    stage('Deploy Docker Image with new changes'){
-	        
-	    //start container with the remote image
-	  sh "docker run --name devopsexample -d -p 2222:2222 ${dockerhubaccountid}/${application}:${env.BUILD_NUMBER}"  
-	  
-    }
+
 	
     stage('Remove old images') {
 		// remove docker old images
