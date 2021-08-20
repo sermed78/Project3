@@ -1,4 +1,3 @@
-#Jenkinsfile
 node {
 	
     def application = "devopsexample"
